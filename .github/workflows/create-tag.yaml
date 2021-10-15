@@ -14,8 +14,8 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Create a GitHub release
-        #uses: ncipollo/release-action@v1
-        uses: actions/create-release@latest
+        uses: ncipollo/release-action@v1
+        #uses: actions/create-release@latest
         with:
           tag: ${{ steps.tag_version.outputs.new_tag }}
           name: Release ${{ steps.tag_version.outputs.new_tag }}
